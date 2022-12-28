@@ -32,40 +32,42 @@ public class Q1 {
         driver= new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+        driver.get("http://www.google.com");
     }
     @After
     public void tearDown(){
-        //  driver.close();
+         driver.close();
     }
 
     @Test
     public void test01(){
 
-        driver.get("http://www.google.com");
         driver.findElement(By.xpath("//input[@ class='gLFyf']"))
                 .sendKeys("The Lord of the Rings"+ Keys.ENTER);
-
          WebElement sonuc1= driver.findElement(By.xpath("//div[@ id='result-stats']"));
-        sonuc1.getText();
-
+        System.out.println(sonuc1.getText());
         driver.findElement(By.xpath("//span[@ class=\"ExCKkf z1asCe rzyADb\"]")).click();
+    }
+    @Test
+    public void test02(){
 
         driver.findElement(By.xpath("//input[@ class='gLFyf']"))
                 .sendKeys("Brave Heart"+ Keys.ENTER);
-
         WebElement sonuc2= driver.findElement(By.xpath("//div[@ id='result-stats']"));
+        System.out.println(sonuc2.getText());
 
-        sonuc2.getText();
-        driver.findElement(By.xpath("//span[@ class=\"ExCKkf z1asCe rzyADb\"]")).click();
+    }
+
+    @Test
+    public void test03(){
 
         driver.findElement(By.xpath("//input[@ class='gLFyf']"))
                 .sendKeys("Harry Potter"+ Keys.ENTER);
 
         WebElement sonuc3= driver.findElement(By.xpath("//div[@ id='result-stats']"));
-
-        sonuc3.getText();
-
-
+        System.out.println(sonuc3.getText());
+        driver.findElement(By.xpath("//span[@ class=\"ExCKkf z1asCe rzyADb\"]")).click();
     }
+
+
 }
