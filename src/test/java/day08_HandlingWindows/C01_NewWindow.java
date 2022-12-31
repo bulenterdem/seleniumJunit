@@ -60,9 +60,9 @@ public class C01_NewWindow {
         driver.get("https://www.wisequarter.com");
 
         String actualUrl= driver.getCurrentUrl();
-        String expectedKelime="wisweuarter";
+        String expectedkelime="wisequarter";
 
-        Assert.assertTrue(actualUrl.contains(expectedKelime));
+        Assert.assertTrue(actualUrl.contains(expectedkelime));
         Thread.sleep(3000);
 
 
