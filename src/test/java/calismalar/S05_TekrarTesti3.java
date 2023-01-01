@@ -69,14 +69,20 @@ public class S05_TekrarTesti3 extends TestBase {
 
         //4- ikinci ürüne relative locater kullanarak tıklayin
 
-       driver.findElement(By.xpath("(//span[@ class='a-size-base-plus a-color-base a-text-normal'])[2]")).click();
+       WebElement ikinciurun=driver.findElement(By.xpath("//div[@ data-index='2' ]"));
+
+       ikinciurun.click();
+
+
+
+
 
         ReusableMethods.bekleMethodu(5);
 
         //5- ürünün title'ni ve fiyatını variable’a assign edip ürünü sepete ekleyelim
 
-        // WebElement urunFiyatElementi=driver.findElement(By.xpath("(//div[@ class='a-section a-spacing-micro']"));
-       //   WebElement titleurunelemnti = driver.findElement(By.xpath("//span[@ id='productTitle']"));
+      String urunFiyatElementi=driver.findElement(By.xpath("(//span[@ class='a-offscreen'])[6]")).getText();
+       String  titleurun = driver.findElement(By.xpath("//span[@ id='productTitle']")).getText();
         driver.findElement(By.xpath("//input[ @id='add-to-cart-button']")).click();
 
         ReusableMethods.bekleMethodu(3);
