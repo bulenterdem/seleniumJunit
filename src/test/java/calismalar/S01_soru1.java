@@ -46,14 +46,14 @@ public class S01_soru1 {
 
         driver.findElement(By.name("name")).sendKeys("bulent");
 
-        driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys("bulenterdem111@gmail.com");
+        driver.findElement(By.xpath("(//input[@name='email'])[2]")).sendKeys("bulenterdem1@gmail.com");
 
         // 7. Click 'Signup' button
         WebElement signUpKutusu =driver.findElement(By.xpath("(//button[@class='btn btn-default'])[2]"));
         signUpKutusu.click();
 
         // 8. Verify that 'ENTER ACCOUNT INFORMATION' is visible
-        driver.findElement(By.xpath("(//div[@class=\'radio-inline\'])[1]")).click();
+        driver.findElement(By.xpath("(//div[@class='radio-inline'])[1]")).click();
 
         // 9. Fill details: Title, Name, Email, Password, Date of birth
 
@@ -82,7 +82,7 @@ public class S01_soru1 {
         // 12. Fill details: First name, Last name, Company, Address, Address2,
         // Country, State, City, Zipcode, Mobile Number
         WebElement nameKutusu= driver.findElement(By.xpath("//input[@id='first_name']"));
-        nameKutusu.sendKeys("Bulent");
+        nameKutusu.sendKeys("ulent");
 
         WebElement lastnameKutusu= driver.findElement(By.xpath("//input[@id='last_name']"));
         lastnameKutusu.sendKeys("Erdem");
