@@ -12,10 +12,9 @@ public class C02_ReadExcel {
     @Test
     public void test01() throws IOException {
 
-        String Dosyayolu= "C:\\Users\\bulen\\IdeaProjects\\com.Team105JUnit\\src\\test\\java\\day12_webtables_excel\\ulkeler.xlsx";
+        String Dosyayolu= "src/test/java/day12_webtables_excel/ulkeler.xlsx";
 
         FileInputStream fis = new FileInputStream(Dosyayolu);
-
 
 
 
